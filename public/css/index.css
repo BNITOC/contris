@@ -1,0 +1,129 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #010626;
+    background-image: url('../imagen/fondo.jpg');
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen */
+}
+
+/* Barra superior */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #010626;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.titulo h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.iniciar-sesion button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.iniciar-sesion button:hover {
+    background-color: #0056b3;
+}
+
+/* Cuadro de validación en el centro */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.cuadro-validacion {
+    text-align: center;
+  
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    border: #0056b3;
+}
+
+.cuadro-validacion h2 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.cuadro-validacion input {
+    position: relative;
+    padding: 10px;
+    width: 180px;
+    margin-bottom: 20px;
+    border: 1px solid #bd4747;
+    border-radius: 5px;
+    top: -80px;
+    left:55px;
+    
+}
+
+.cuadro-validacion button {
+    padding: 10px 20px;
+    background-color: #010626;
+    color: rgb(212, 32, 32);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    top: -35px;
+    left: -79px;
+
+}
+
+.cuadro-validacion button:hover {
+    background-color: #021859;
+}
+
+/* Mensaje promocional */
+.promocion {
+    text-align: center;
+    padding: 20px;
+    color: #cf8608;
+    font-size: 1.1em;
+}
+
+
+.promocion strong {
+    color: red;
+    font-size: 1.2em;
+}
+
+/* Estilo del footer */
+footer {
+    
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    
+}
