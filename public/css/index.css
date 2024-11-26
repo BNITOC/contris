@@ -11,8 +11,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    background-color: #010626;
-    background-image: url('../imagen/fondo.jpg');
+
+    background-image: url("../imagen/fondo.jpg");
     background-size: cover; /* Para que la imagen cubra todo el fondo */
     background-position: center; /* Para centrar la imagen */
 }
@@ -23,10 +23,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #010626;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #05f2f2, #832785);
+    box-shadow: 0 4px 6px rgba(231, 231, 231, 0.1);
+    font-family: Arial, sans-serif;
 }
-
+.header {
+    color: #05f2f2;
+    left: 290px;
+    
+}
 .logo img {
     width: 50px;
     height: 50px;
@@ -35,20 +40,29 @@ body {
 .titulo h1 {
     font-size: 1.5em;
     text-align: center;
+     font-family: Arial, sans-serif;
 }
 
 .iniciar-sesion button {
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: rgb(255, 255, 255);
+    background: linear-gradient(
+        to right,
+        #832785,
+        #05f2f2
+    ); /* Cambia los colores como desees */
+    color: rgb(236, 215, 215);
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .iniciar-sesion button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(
+        to right,
+        #a847a8,
+        #003d7d
+    ); /* Cambia los colores en hover si quieres */
 }
 
 /* Cuadro de validación en el centro */
@@ -59,19 +73,24 @@ body {
     flex-grow: 1;
 }
 
+input {
+    background-color: #000000; 
+    border-radius: 100px; 
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Fuente del texto */
+    font-weight: bold; 
+    color: #fff;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+}
+
 .cuadro-validacion {
     text-align: center;
-  
+
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 100px;
-    border: #0056b3;
-}
-
-.cuadro-validacion h2 {
-    margin-bottom: 20px;
-    font-size: 1.2em;
+    border: #528eca;
 }
 
 .cuadro-validacion input {
@@ -79,39 +98,35 @@ body {
     padding: 10px;
     width: 180px;
     margin-bottom: 20px;
-    border: 1px solid #bd4747;
-    border-radius: 5px;
-    top: -80px;
-    left:55px;
-    
+    border-radius: 15px;
+    top: -170px;
+    left: 55px;
 }
 
 .cuadro-validacion button {
     padding: 10px 20px;
-    background-color: #010626;
+    background: linear-gradient(to right, #832785, #05f2f2);
     color: rgb(212, 32, 32);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
-    top: -35px;
+    top: -105px;
     left: -79px;
-
 }
 
 .cuadro-validacion button:hover {
-    background-color: #021859;
+    background: linear-gradient(to right, #a847a8, #003d7d);
 }
 
 /* Mensaje promocional */
 .promocion {
     text-align: center;
     padding: 20px;
-    color: #cf8608;
+    color: #9e5cf5;
     font-size: 1.1em;
 }
-
 
 .promocion strong {
     color: red;
@@ -120,10 +135,99 @@ body {
 
 /* Estilo del footer */
 footer {
-    
     padding: 10px;
     text-align: center;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     width: 250px;
-    
+    position: fixed;
+    right: 0; /* Alinea el footer a la derecha de la pantalla */
+    bottom: 0; /* Alinea el footer a la parte inferior de la pantalla */
+}
+
+/* Ajuste del tamaño del modal */
+.modal-dialog {
+    max-width: 500px; /* Ajustamos el ancho máximo a un valor más pequeño */
+    margin: 30px auto; /* Centrar el modal en la pantalla */
+    border: none; /* Sin borde en el contorno */
+}
+
+/* Estilo general del modal */
+.modal-body {
+    background: linear-gradient(to right, #a847a8, #003d7d); /* Gradiente de colores vivos */
+    padding: 20px; /* Reducimos el padding para hacerlo más compacto */
+    border-radius: 12px; /* Bordes redondeados */
+    text-align: center;
+    color: #ffffff; /* Texto blanco para mayor contraste */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad */
+    border: none; /* Sin borde en el body del modal */
+}
+
+/* Estilo del título */
+.modal-title {
+    color: #ffffff; /* Título blanco para resaltar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía moderna */
+    font-size: 22px; /* Tamaño de fuente más grande para resaltar */
+    font-weight: 600; /* Mayor peso en el título */
+    margin-bottom: 10px; /* Separación entre el título y el contenido */
+}
+
+/* Estilo del encabezado del modal */
+.modal-header {
+    background: linear-gradient(to right, #a847a8, #003d7d); /* Fondo con el mismo gradiente */
+    text-align: center;
+    padding: 10px 15px; /* Reducimos el padding para hacerlo más compacto */
+    border-radius: 0px 0px 0 0; /* Bordes superiores redondeados */
+    border: none; /* Sin borde en el encabezado */
+}
+
+/* Estilo de la información del tiempo */
+.time-info {
+    margin-bottom: 15px; /* Menos espacio debajo para hacerlo más compacto */
+    color: #f0f0f0; /* Color claro para el texto */
+}
+
+.time-info h4 {
+    margin: 10px 0; /* Espaciado entre cada título */
+    font-size: 16px; /* Reducimos el tamaño de fuente */
+    font-weight: 500; /* Peso de fuente moderado */
+}
+
+.time-info span {
+    font-weight: 700; /* Negrita para los valores */
+    color: #ffffff; /* Texto blanco para contraste */
+}
+
+/* Estilo del mensaje */
+.mensaje {
+    font-style: italic; /* Mantener el estilo itálico */
+    color: #ffcc00; /* Color dorado para hacer el mensaje más llamativo */
+    text-align: center;
+    margin-top: 15px; /* Menos espacio superior */
+    font-size: 14px; /* Tamaño de fuente moderado */
+}
+
+/* Agregar una transición para las interacciones con el modal */
+.modal-content {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-in-out;
+}
+
+/* Animación sutil al abrir */
+.modal.show .modal-dialog {
+    transform: scale(1.05); /* Levemente más grande al abrir */
+    opacity: 1; /* Aseguramos que la opacidad sea visible */
+}
+
+/* Estilo de los botones si es necesario */
+.modal-footer .btn {
+    background-color: #ffcc00; /* Color dorado para los botones */
+    color: #003d7d; /* Texto azul oscuro para contraste */
+    border-radius: none; /* Bordes redondeados */
+    padding: 8px 18px; /* Reducimos el tamaño de los botones */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Transición suave */
+    border: none; /* Sin borde en el botón */
+}
+
+.modal-footer .btn:hover {
+    background-color: #a847a8; /* Color morado al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escalado al hover */
 }

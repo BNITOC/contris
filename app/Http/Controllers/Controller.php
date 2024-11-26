@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-abstract class Controller
+use App\Cliente;
+use Illuminate\Routing\Controller as BaseController;
+
+class Controller extends BaseController
 {
-    //
-    public function index(){
-        $categories = Category::all();            
-            
-        return view('back.pages.user.category.index')->with([
-            'categories' => $categories
-        ]);
-    }
+    // Métodos comunes o lógica para los controladores
 }

@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #a8adcc;
+    background-image: url("../imagen/22.jpg");
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen */
+}
+
+/* Barra superior */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(to right, #05f2f2, #832785);
+    box-shadow: 0 4px 6px rgba(231, 231, 231, 0.1);
+    color: #05f2f2;
+    position: relative;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.titulo h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.iniciar-sesion button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #832785, #05f2f2);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.iniciar-sesion button:hover {
+    background: linear-gradient(to right, #a847a8, #003d7d);
+}
+
+/* Cuadro de validación en el centro */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.cuadro-validacion {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    left: 150px;
+    top: 100px;
+
+    background: none; /* Fondo blanco para el cuadro de validación */
+}
+
+.cuadro-validacion input {
+    padding: 10px;
+    width: 180px;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: 2px solid #ffffff;
+    background-color: #0f1a1a;
+    left: 150px;
+    top: 100px;
+}
+
+.cuadro-validacion input:first-of-type {
+    margin-top: 35px; /* Espacio superior para el primer input */
+    margin-left: 20px;
+}
+
+.cuadro-validacion input:last-of-type {
+    margin-bottom: 35px; /* Espacio inferior para el segundo input */
+    margin-left: 20px;
+}
+.cuadro-validacion button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #832785, #05f2f2);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cuadro-validacion button:hover {
+    background: linear-gradient(to right, #a847a8, #003d7d);
+}
